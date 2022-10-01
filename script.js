@@ -21,6 +21,12 @@ var num= window.prompt("De cuantos caracteres es tu contraseña");
     return;
   } else{
   alert("Al menos un tipo de los siguientes caracteres debe ser selecciondo");
+  var defpass="";
+  var retpass="";
+  var simbolosi= confirm("¿Desea tener SIMBOLOS en su contraseña?");
+  var minsi=confirm("¿Desea tener MINUSCULAS en su contraseña?");
+  var mayussi=confirm("¿Desea tener MAYUSCULAS en su contraseña?");
+  var numerossi=confirm("¿Desea tener NUMEROS en su contraseña?");
   }
 }
 // Agregar oyente de eventos para generar el botón
