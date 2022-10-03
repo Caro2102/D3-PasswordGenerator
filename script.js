@@ -28,6 +28,33 @@ var num= window.prompt("De cuantos caracteres es tu contraseña");
   var mayussi=confirm("¿Desea tener MAYUSCULAS en su contraseña?");
   var numerossi=confirm("¿Desea tener NUMEROS en su contraseña?");
   }
+  // Ciclo hasta que se acepte un caracter
+  while(simbolosi===false && minsi===false && mayussi===false && numerossi===false){
+    alert("Al menos un tipo de los siguientes caracteres debe ser selecciondo");
+    var simbolosi= confirm("¿Desea tener SIMBOLOS en su contraseña?");
+    var minsi=confirm("¿Desea tener MINUSCULAS en su contraseña?");
+    var mayussi=confirm("¿Desea tener MAYUSCULAS en su contraseña?");
+    var numerossi=confirm("¿Desea tener NUMEROS en su contraseña?");
+  }
+  // Se agregan caracteres si se aceptan 
+  if(simbolosi) {
+    defpass+=simbolos;
+  }
+   if(minsi) {
+    defpass+=letrasmin;
+  }
+   if(mayussi){
+    defpass+=letrasmay;
+  }
+  if(numerossi){
+    defpass+=numeros;
+  }
+  // Contraseña aleatoria
+  for (var i = 0; i < num; i++) {
+    retpass+=defpass[Math.floor(Math.random() * defpass.length)];
+    }
+    return retpass;
+
 }
 // Agregar oyente de eventos para generar el botón
 generateBtn.addEventListener("click", writePassword);
